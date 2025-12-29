@@ -1,0 +1,1 @@
+export { HealthGradingSystem } from './HealthGradingSystem'

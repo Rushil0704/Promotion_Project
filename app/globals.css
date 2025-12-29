@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #F4F1EA;
+  --color-foreground: #171717;
+  --color-text: #626262;
+  --color-text-dark: #373737;
+  --color-primary: #FFCA00;
+  --color-secondary: #08523B;
+  --font-sans: 'General Sans', Helvetica, sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-full px-4 sm:px-6 lg:px-8 xl:px-10 max-w-360;
+  }
+}
