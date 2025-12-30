@@ -1,5 +1,5 @@
 export const ExploreourApp = () => {
     return (
-        <div>ExploreourApp</div>
+        <div className="container">ExploreourApp</div>
     )
 }
