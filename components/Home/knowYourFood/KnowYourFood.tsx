@@ -7,8 +7,8 @@ export const KnowYourFood = () => {
 		<div className="container relative pt-10">
 			<div className="bg-yellow-400 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 ">
 				{/* Left Content */}
-				<div className="flex-1 text-left max-w-[60%]">
-					<h2 className="text-4xl md:text-5xl font-bold text-teal-900 mb-6 leading-tight">
+				<div className="flex-1 text-left md:max-w-[60%]">
+					<h2 className="text-3xl md:text-5xl font-bold text-teal-900 mb-6 leading-tight">
 						Know Your Food. <br />
 						Protect Your Health.
 					</h2>
