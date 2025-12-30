@@ -16,7 +16,7 @@ export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<div className="container mx-auto px-4">
+		<div className="container sticky top-5 z-50 -mb-20">
 			<header className="bg-secondary sticky top-5 rounded-full h-20 text-white flex justify-between items-center px-6 md:px-10 z-50">
 				{/* Logo Section */}
 				<div className="flex items-center gap-3 cursor-pointer">

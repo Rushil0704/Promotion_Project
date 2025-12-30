@@ -15,3 +15,7 @@
     @apply mx-auto w-full px-4 sm:px-6 lg:px-8 xl:px-10 max-w-360;
   }
 }
+
+.slick-dots li button:before {
+  display: none;
+}
