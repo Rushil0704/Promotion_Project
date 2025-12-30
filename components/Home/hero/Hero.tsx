@@ -13,32 +13,59 @@ export const Hero = () => {
 
 			<div className="container relative z-10">
 				<div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
+			
 					{/* Left Column: Text and Buttons */}
-					<div className="flex-1 flex flex-col items-start gap-8 ">
+					<div className="flex-1 flex flex-col items-start gap-8 relative">
+					
+						{/* Subtle glow: light blurred ellipse + base glow image (reduced) */}
+						<div
+							className="absolute top-[8%] -left-[12%] rotate-[6deg] w-[450px] h-[474px] rounded-full bg-[rgba(255,202,0,0.2)] filter blur-[290px] pointer-events-none -z-20"
+							aria-hidden="true"
+						/>
+						<Image
+							src="/Images/Glow.png"
+							alt=""
+							fill
+							className="absolute top-[2%] -left-[15%] w-[120%] max-w-none h-auto z-0 pointer-events-none opacity-60"
+						/>
+						{/* ----------------------------------------- */}
+
 						{/* Top "Loved by..." Pill */}
-						<div className="inline-flex items-center bg-white/60 border border-[#E5E3D8] rounded-full  shadow-sm backdrop-blur-sm pr-7.5 py-3.75] pl-2">
-							<Image
-								src="/Images/Image1.png"
-								alt="Users"
-								width={38}
-								height={38}
-								className="object-contain"
-							/>
-							<Image
-								src="/Images/Image2.png"
-								alt="Users"
-								width={38}
-								height={38}
-								className="object-contain"
-							/>
-							<Image
-								src="/Images/Image3.png"
-								alt="Users"
-								width={38}
-								height={38}
-								className="object-contain"
-							/>
-							<span className="text-[18px] text-black font-medium ml-4">
+						<div className="inline-flex items-center bg-white/60 border border-[#E5E3D8] rounded-full shadow-sm backdrop-blur-sm pr-6 py-2 pl-2">
+						
+							<div className="flex items-center">
+							
+								<div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden z-30">
+									<Image
+										src="/Images/Image1.png"
+										alt="User 1"
+										fill
+										className="object-cover"
+									/>
+								</div>
+
+							
+								<div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden z-20 -ml-3">
+									<Image
+										src="/Images/Image2.png"
+										alt="User 2"
+										fill
+										className="object-cover"
+									/>
+								</div>
+
+						
+								<div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden z-10 -ml-3">
+									<Image
+										src="/Images/Image3.png"
+										alt="User 3"
+										fill
+										className="object-cover"
+									/>
+								</div>
+							</div>
+
+							<span className="text-[16px] md:text-[18px] text-black font-medium ml-3">
 								Loved by 2.4M users with a 4.8 rating
 							</span>
 						</div>
@@ -63,35 +90,56 @@ export const Hero = () => {
 						</p>
 
 						{/* App Store Buttons */}
-						<div className="flex flex-wrap gap-4 mt-4">
-							{/* Google Play Button - Using dark green background */}
+						<div className="flex flex-wrap gap-5 mt-4">
+							{/* Google Play Button */}
 							<a
 								href="#"
-								className="transition-transform hover:-translate-y-1"
+								className="transition-transform hover:-translate-y-1 active:scale-95"
 							>
-								<div className="bg-[#114D3A] rounded-xl p-1.5">
+								<div className="bg-[#114D3A] rounded-2xl  flex items-center gap-3 h-full px-3 w-49 border border-white/10">
+									{/* Icon */}
 									<Image
-										src="/Images/google-play-badge.png"
-										alt="Get it on Google Play"
-										width={160}
-										height={50}
-										className="h-12.5 w-auto"
+										src="/Images/Playstore.png" // અહિયાં ફક્ત Play Store ના લોગો વાળી ઈમેજ રાખવી
+										alt="Google Play Icon"
+										width={30}
+										height={36}
+										className="object-contain"
 									/>
+									{/* Text Section */}
+									<div className="flex flex-col items-start leading-none">
+										<span className="text-white text-[11px] font-medium uppercase tracking-wider mb-1">
+											GET IT ON
+										</span>
+										<span className="text-[#FFD700] text-[22px] font-bold">
+											Google Play
+										</span>
+									</div>
 								</div>
 							</a>
-							{/* App Store Button - Using dark green background */}
+
+							{/* App Store Button */}
 							<a
 								href="#"
-								className="transition-transform hover:-translate-y-1"
+								className="transition-transform hover:-translate-y-1 active:scale-95"
 							>
-								<div className="bg-[#114D3A] rounded-xl p-1.5">
+								<div className="bg-[#114D3A] rounded-2xl px-3 flex items-center gap-3 h-17 min-w-[190px] border border-white/10">
+									{/* Icon */}
 									<Image
-										src="/Images/app-store-badge.png"
-										alt="Download on the App Store"
-										width={160}
-										height={50}
-										className="h-12.5 w-auto"
+										src="/Images/Apple.png"
+										alt="App Store Icon"
+										width={30}
+										height={36}
+										className="object-contain filter brightness-0 invert"
 									/>
+									{/* Text Section */}
+									<div className="flex flex-col items-start leading-none">
+										<span className="text-white text-[11px] font-medium uppercase tracking-wider mb-1">
+											GET IT ON
+										</span>
+										<span className="text-[#FFD700] text-[22px] font-bold">
+											App Store
+										</span>
+									</div>
 								</div>
 							</a>
 						</div>
@@ -118,14 +166,14 @@ export const Hero = () => {
 								className="relative z-10 w-full h-auto drop-shadow-2xl"
 							/>
 
-							{/* Floating Product Card */}
-							<Image
-								src="/Images/floating-card.png"
-								alt="Product Scan Result"
-								width={240}
-								height={300}
-								className="absolute -bottom-10 -right-4 lg:-right-10 z-20 w-50 md:w-60 h-auto shadow-[0_20px_40px_-15px_rgba(0,0,0,0.2)] rounded-2xl"
-							/>
+							{/* Floating Product Card - Commented out as per your previous code, uncomment if needed */}
+							{/* <Image
+                src="/Images/floating-card.png"
+                alt="Product Scan Result"
+                width={240}
+                height={300}
+                className="absolute -bottom-10 -right-4 lg:-right-10 z-20 w-50 md:w-60 h-auto shadow-[0_20px_40px_-15px_rgba(0,0,0,0.2)] rounded-2xl"
+              /> */}
 						</div>
 					</div>
 				</div>

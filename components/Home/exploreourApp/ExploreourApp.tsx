@@ -106,72 +106,91 @@ export const ExploreourApp = () => {
     };
 
     return (
-        <div className="w-full py-16 px-4">
-            <div className="max-w-500 mx-auto">
-                {/* Title */}
-                <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-teal-700">
-                    Explore our App
-                </h2>
+		<div className="w-full py-16 px-4">
+			<div className="max-w-500 mx-auto">
+				{/* Title */}
+				<h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-teal-700">
+					Explore our App
+				</h2>
 
-                {/* Carousel Container */}
-                <div
-                    className="relative w-full flex justify-center items-center min-h-125 mb-12"
-                    onTouchStart={handleTouchStart}
-                    onTouchEnd={handleTouchEnd}
-                >
-                    {/* Phones Carousel */}
-                    <div className="relative w-full h-125 flex justify-center items-center">
-                        {slides.map((slide, index) => {
-                            const position = getPhonePosition(index);
+				{/* Carousel Container */}
+				<div
+					className="relative w-full flex justify-center items-center min-h-125 mb-12"
+					onTouchStart={handleTouchStart}
+					onTouchEnd={handleTouchEnd}
+				>
+					{/* Phones Carousel */}
+					<div className="relative w-full h-125 flex justify-center items-center">
+						{slides.map((slide, index) => {
+							const position = getPhonePosition(index);
 
-                            return (
-                                <div
-                                    key={slide.id}
-                                    className="absolute transition-all duration-500 ease-out cursor-pointer hover:scale-105"
-                                    onClick={() => handleSlideClick(index)}
-                                    style={{
-                                        transform: `translateX(${position.translateX}px) scale(${position.scale})`,
-                                        zIndex: position.zIndex,
-                                        opacity: position.opacity,
-                                    }}
-                                >
-                                    <div className="relative w-56 h-125">
-                                        <Image
-                                            src={slide.image}
-                                            alt={`App screen ${slide.id}`}
-                                            fill
-                                            className="object-contain"
-                                            priority
-                                        />
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
+							return (
+								<div
+									key={slide.id}
+									className="absolute transition-all duration-500 ease-out cursor-pointer hover:scale-105"
+									onClick={() => handleSlideClick(index)}
+									style={{
+										transform: `translateX(${position.translateX}px) scale(${position.scale})`,
+										zIndex: position.zIndex,
+										opacity: position.opacity,
+									}}
+								>
+									<div className="relative w-56 h-125">
+										<Image
+											src={slide.image}
+											alt={`App screen ${slide.id}`}
+											fill
+											className="object-contain"
+											priority
+										/>
+									</div>
+								</div>
+							);
+						})}
+					</div>
+				</div>
 
-                {/* App Store Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-lg transition-colors font-semibold">
-                        <Image
-                            src="/Images/Playstore.png"
-                            alt="Google Play"
-                            width={20}
-                            height={20}
-                        />
-                        GET IT ON Google Play
-                    </button>
-                    <button className="flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-lg transition-colors font-semibold">
-                        <Image
-                            src="/Images/Apple.png"
-                            alt="App Store"
-                            width={20}
-                            height={20}
-                        />
-                        GET IT ON App Store
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
+				{/* App Store Buttons */}
+				<div className="flex flex-col sm:flex-row gap-5 justify-center">
+					{/* Google Play Button */}
+					<button className="flex items-center gap-3 bg-secondary text-white px-6 py-2 rounded-2xl border border-white/10 transition-transform hover:scale-105 active:scale-95">
+						<Image
+							src="/Images/Playstore.png"
+							alt="Google Play"
+							width={32}
+							height={32}
+							className="object-contain"
+						/>
+						<div className="flex flex-col items-start leading-tight">
+							<span className="text-[15px] tracking-wider">
+								GET IT ON
+							</span>
+							<span className="text-xl font-bold text-[#FFD700]">
+								Google Play
+							</span>
+						</div>
+					</button>
+
+					{/* App Store Button */}
+					<button className="flex items-center gap-3 bg-secondary text-white px-6 py-2 rounded-2xl border border-white/10 transition-transform hover:scale-105 active:scale-95">
+						<Image
+							src="/Images/Apple.png"
+							alt="App Store"
+							width={32}
+							height={32}
+							className="object-contain filter brightness-0 invert"
+						/>
+						<div className="flex flex-col items-start leading-tight">
+							<span className="text-[15px]  tracking-wider">
+								GET IT ON
+							</span>
+							<span className="text-xl font-bold text-[#FFD700]">
+								App Store
+							</span>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+	);
 }

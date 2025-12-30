@@ -104,19 +104,18 @@ export const Testimonials = () => {
                             <div key={testimonial.id} className="px-4">
                                 <div
                                     className={`rounded-2xl p-8 transition-all duration-300 min-h-64 flex flex-col justify-between ${isCenter
-                                        ? 'bg-teal-700 text-white shadow-lg'
+                                        ? 'bg-secondary text-white shadow-lg'
                                         : 'bg-white text-gray-700 shadow-md'
                                         }`}
                                 >
                                     {/* Quote Icon */}
                                     <div className="mb-4">
-                                        <svg
-                                            className={`w-12 h-12 ${isCenter ? 'text-white opacity-50' : 'text-gray-300'}`}
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-3-7-3s-7 1.75-7 3v10c0 1 0 2 2 4h4c1 2 5 4 7 4z" />
-                                        </svg>
+                                        <Image
+                                            src="/Images/tumb.png"
+                                            alt="Quote Icon"
+                                            width={60}
+                                            height={47}
+                                        />
                                     </div>
 
                                     {/* Testimonial Text */}
