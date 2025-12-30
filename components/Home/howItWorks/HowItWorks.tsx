@@ -4,7 +4,7 @@ import Image from "next/image";
 export const HowItWorks = () => {
 	return (
 		<section className="bg-[#F5F3E8] overflow-hidden">
-			<div className="container mx-auto px-6 lg:px-20">
+			<div className="container mx-auto">
 				<div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
 					{/* Image Column: Rectangle and Phone */}
 					{/* મોબાઈલમાં min-h-[450px] આપવાથી ફોન કપાઈ નહીં જાય */}
