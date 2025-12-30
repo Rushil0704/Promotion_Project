@@ -17,7 +17,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body
 				className={`
-					 bg-background font-sans min-h-screen flex flex-col gap-50 text-text`}
+					 bg-background font-sans min-h-screen flex flex-col sm:gap-50 gap-25 text-text`}
 			>
 				<Header />
 				{children}
