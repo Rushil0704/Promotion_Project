@@ -12,14 +12,12 @@ export const Hero = () => {
 			></div>
 
 			<div className="container relative z-10">
-				<div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
-			
+				<div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
 					{/* Left Column: Text and Buttons */}
 					<div className="flex-1 flex flex-col items-start gap-8 relative">
-					
 						{/* Subtle glow: light blurred ellipse + base glow image (reduced) */}
 						<div
-							className="absolute top-[8%] -left-[12%] rotate-[6deg] w-[450px] h-[474px] rounded-full bg-[rgba(255,202,0,0.2)] filter blur-[290px] pointer-events-none -z-20"
+							className="absolute top-[8%] -left-[12%] rotate-6 w-112.5 h-118.5 rounded-full bg-[rgba(255,202,0,0.2)] filter blur-[290px] pointer-events-none -z-20"
 							aria-hidden="true"
 						/>
 						<Image
@@ -32,9 +30,7 @@ export const Hero = () => {
 
 						{/* Top "Loved by..." Pill */}
 						<div className="inline-flex items-center bg-white/60 border border-[#E5E3D8] rounded-full shadow-sm backdrop-blur-sm pr-6 py-2 pl-2">
-						
 							<div className="flex items-center">
-							
 								<div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden z-30">
 									<Image
 										src="/Images/Image1.png"
@@ -44,7 +40,6 @@ export const Hero = () => {
 									/>
 								</div>
 
-							
 								<div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden z-20 -ml-3">
 									<Image
 										src="/Images/Image2.png"
@@ -54,7 +49,6 @@ export const Hero = () => {
 									/>
 								</div>
 
-						
 								<div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden z-10 -ml-3">
 									<Image
 										src="/Images/Image3.png"
@@ -71,7 +65,7 @@ export const Hero = () => {
 						</div>
 
 						{/* Main Headline */}
-						<h1 className="text-4xl md:text-5xl lg:text-[62px] font-bold leading-[1.1] tracking-tight text-secondary">
+						<h1 className="text-3xl  md:text-5xl lg:text-[62px] font-bold leading-[1.1] tracking-tight text-secondary">
 							Scan Any Product. Know{" "}
 							<br className="hidden lg:block" />
 							<span className="relative inline-block">
@@ -90,13 +84,13 @@ export const Hero = () => {
 						</p>
 
 						{/* App Store Buttons */}
-						<div className="flex flex-wrap gap-5 mt-4">
+						<div className="flex flex-wrap justify-center items-center gap-5 mt-4">
 							{/* Google Play Button */}
 							<a
 								href="#"
 								className="transition-transform hover:-translate-y-1 active:scale-95"
 							>
-								<div className="bg-[#114D3A] rounded-2xl  flex items-center gap-3 h-full px-3 w-49 border border-white/10">
+								<div className="bg-[#114D3A] rounded-2xl  flex items-center gap-3 h-17 min-w-47.5 px-3 border border-white/10">
 									{/* Icon */}
 									<Image
 										src="/Images/Playstore.png" // અહિયાં ફક્ત Play Store ના લોગો વાળી ઈમેજ રાખવી
@@ -122,7 +116,7 @@ export const Hero = () => {
 								href="#"
 								className="transition-transform hover:-translate-y-1 active:scale-95"
 							>
-								<div className="bg-[#114D3A] rounded-2xl px-3 flex items-center gap-3 h-17 min-w-[190px] border border-white/10">
+								<div className="bg-[#114D3A] rounded-2xl px-3 flex items-center gap-3 h-17 min-w-47.5 border border-white/10">
 									{/* Icon */}
 									<Image
 										src="/Images/Apple.png"

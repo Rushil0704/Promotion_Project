@@ -86,14 +86,14 @@ export const ExploreourApp = () => {
 	};
 
 	return (
-		<div className="w-full py-16 px-4 bg-[#F5F3E8] overflow-hidden">
+		<div className="w-full  bg-[#F5F3E8] overflow-hidden">
 			<div className="max-w-6xl mx-auto">
 				<h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#114D3A]">
 					Explore our App
 				</h2>
 
 				<div
-					className="relative w-full flex justify-center items-center min-h-[450px] md:min-h-[550px] mb-12"
+					className="relative w-full flex justify-center items-center min-h-112.5 md:min-h-137.5 mb-12"
 					onTouchStart={handleTouchStart}
 					onTouchEnd={handleTouchEnd}
 				>
@@ -113,7 +113,7 @@ export const ExploreourApp = () => {
 										opacity: position.opacity,
 									}}
 								>
-									<div className="relative w-48 h-[400px] md:w-64 md:h-[500px]">
+									<div className="relative w-48 h-100 md:w-64 md:h-125">
 										<Image
 											src={slide.image}
 											alt={`App screen ${slide.id}`}
@@ -129,8 +129,10 @@ export const ExploreourApp = () => {
 				</div>
 
 				{/* App Store Buttons */}
-				<div className="flex flex-col sm:flex-row gap-5 justify-center mt-10">
-					<button className="flex items-center gap-3 bg-[#114D3A] text-white px-8 py-3 rounded-2xl border border-white/10 transition-all hover:scale-105 active:scale-95 shadow-lg">
+				<div className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-10">
+					{/* Google Play Button */}
+					
+					<button className="flex items-center gap-3 bg-[#114D3A] text-white px-8 py-3 rounded-2xl border border-white/10 transition-all hover:scale-105 active:scale-95 shadow-lg min-w-52.5 justify-center">
 						<Image
 							src="/Images/Playstore.png"
 							alt="Google Play"
@@ -148,7 +150,9 @@ export const ExploreourApp = () => {
 						</div>
 					</button>
 
-					<button className="flex items-center gap-3 bg-[#114D3A] text-white px-8 py-3 rounded-2xl border border-white/10 transition-all hover:scale-105 active:scale-95 shadow-lg">
+					{/* App Store Button */}
+					
+					<button className="flex items-center gap-3 bg-[#114D3A] text-white px-8 py-3 rounded-2xl border border-white/10 transition-all hover:scale-105 active:scale-95 shadow-lg min-w-52.5 justify-center">
 						<Image
 							src="/Images/Apple.png"
 							alt="App Store"

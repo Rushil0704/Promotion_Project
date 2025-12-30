@@ -10,8 +10,8 @@ export const HealthGradingSystem = () => {
 	];
 
 	return (
-		<section className="py-20 bg-[#F5F3E8]">
-			<div className="container mx-auto px-4 lg:px-20">
+		<section className=" bg-[#F5F3E8]">
+			<div className="container mx-auto ">
 				{/* Header Section */}
 				<div className="text-center mb-16">
 					<h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">

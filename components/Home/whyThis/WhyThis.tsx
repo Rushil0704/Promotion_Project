@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export const WhyThis = () => {
 	return (
-		<section className="bg-[#F5F3E8] py-16 lg:py-24 overflow-hidden">
-			<div className="container mx-auto px-6 lg:px-20">
+		<section className="bg-[#F5F3E8] overflow-hidden">
+			<div className="container mx-auto ">
 				<div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
 					{/* Left Section: Text Content */}
 					<div className="flex-1 text-left">
-						<h2 className="text-4xl md:text-5xl lg:text-[54px] font-semibold text-[#114D3A] mb-4.5 ">
+						<h2 className="text-3xl md:text-5xl lg:text-[54px] font-semibold text-[#114D3A] mb-4.5 ">
 							Why This App Exists
 						</h2>
 
@@ -39,14 +39,14 @@ export const WhyThis = () => {
 					</div>
 
 					{/* Right Section: Mobile Image with Decorative Background */}
-					<div className="flex-1 relative flex justify-center items-center w-full min-h-[400px] md:min-h-[550px]">
+					<div className="flex-1 relative flex justify-center items-center w-full min-h-100 md:min-h-137.5">
 						{/* Dark Green Decorative Shape (Pill Shape) */}
 						<div className=" " />
 
 						{/* Phone Image Overlay */}
-						<div className="relative z-10 w-[240px] md:w-[420px] drop-shadow-2xl">
+						<div className="relative z-10 w-60 md:w-105 drop-shadow-2xl">
 							<Image
-								src="/Images/Mobile.png" // તમારા ફોન મોકઅપની ઈમેજનું નામ
+								src="/Images/Mobile.png" 
 								alt="App Interface"
 								width={320}
 								height={650}
