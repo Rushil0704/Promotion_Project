@@ -26,14 +26,14 @@ export const HealthGradingSystem = () => {
 				</div>
 
 				{/* Image Background Container */}
-				<div className="relative w-full  h-[460px] flex items-center">
+				<div className="relative w-full  md:h-115 flex items-center overflow-x-hidden overflow-y-visible">
 					{/* Background Rectangle Image */}
 					<div className="absolute inset-0 z-0">
 						<Image
 							src="/Images/Rectangle.png"
 							alt="background shape"
 							fill
-							className="object-fill lg:object-stretch" // આનાથી ઇમેજ પૂરા બોક્સમાં ફેલાઈ જશે
+							className="object-fill lg:object-stretch"
 							priority
 						/>
 					</div>
@@ -59,7 +59,7 @@ export const HealthGradingSystem = () => {
 										key={index}
 										className="flex items-center gap-3"
 									>
-										<span className="w-2 h-2 bg-black rounded-full flex-shrink-0"></span>
+										<span className="w-2 h-2 bg-black rounded-full shrink-0"></span>
 										<span className="text-black text-lg lg:text-xl">
 											<span className="font-bold">
 												Grade {grade.letter}
@@ -71,28 +71,22 @@ export const HealthGradingSystem = () => {
 							</ul>
 						</div>
 
-						{/* Right Section: Woman Image & Star Icon */}
-						<div className="flex-1 relative w-full lg:w-auto flex justify-center items-end ">
-							{/* Star Icon - Positioned according to the first photo */}
-							<div className="absolute top-0 right-0 lg:top-10 lg:right-10 w-12 h-12 lg:w-16 lg:h-16 z-20">
-								<Image
-									src="/Images/star.png"
-									alt="Star icon"
-									fill
-									className="object-contain"
-								/>
-							</div>
-
-							{/* Woman Image - Using object-contain to look like she's standing in the shape */}
-							<div className="relative w-full h-[400px] lg:h-[518px] z-10">
-								<Image
-									src="/Images/image.png"
-									alt="Woman with phone"
-									fill
-									className="object-contain " 
-								/>
-							</div>
-						</div>
+					</div>
+					<div className="absolute top-0 right-0 lg:top-10 lg:right-10 w-12 h-12 lg:w-16 lg:h-16 z-20">
+						<Image
+							src="/Images/star.png"
+							alt="Star icon"
+							fill
+							className="object-contain"
+						/>
+					</div>
+					<div className="absolute -right-10 bottom-0 w-full h-100 lg:h-129.5 z-10 hidden lg:block">
+						<Image
+							src="/Images/image.png"
+							alt="Woman with phone"
+							fill
+							className="object-contain translate-x-20 lg:translate-x-0 scale-x-[-1]"
+						/>
 					</div>
 				</div>
 			</div>
