@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export const Footer = () => {
 	return (
-		<footer className="bg-secondary mt-20 relative pt-16 pb-10">
+		<footer className="bg-secondary relative pt-16 pb-10">
 			{/* Centered Logo Pill - Using your "perfect" logic */}
-			<div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[100px] w-[300px] bg-white rounded-full flex justify-center items-center border-2 border-secondary text-secondary font-semibold text-[40px] z-10">
+			<div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-16 w-40 lg:h-25 lg:w-75 bg-white rounded-full flex justify-center items-center border-2 border-secondary text-secondary font-semibold text-2xl lg:text-[40px] z-10">
 				Logo
 			</div>
 

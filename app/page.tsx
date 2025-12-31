@@ -10,7 +10,7 @@ import { WhyThis } from "@/components/Home/whyThis";
 
 export default function Home() {
   return (
-    <div className="flex flex-col sm:gap-50 gap-25">
+    <div className="flex flex-col sm:gap-25 gap-12.5">
       <Hero />
       <HowItWorks />
       <HealthGradingSystem />

@@ -148,7 +148,7 @@ export const Hero = () => {
 								alt=""
 								width={500}
 								height={500}
-								className="absolute top-1/2 left-3/5 -translate-x-1/2 -translate-y-1/2 w-[140%] h-auto max-w-none z-0"
+								className="absolute top-1/2 left-1/2 lg:left-3/5 -translate-x-1/2 -translate-y-1/2 w-[140%] h-auto max-w-none z-0"
 							/>
 
 							{/* Mobile Phone Mockup */}
@@ -157,10 +157,10 @@ export const Hero = () => {
 								alt="App Screenshot on Phone"
 								width={480}
 								height={600}
-								className="relative z-10 w-full h-auto drop-shadow-2xl"
+								className="relative z-10 w-full h-auto drop-shadow-2xl lg:mr-0 mr-15"
 							/>
 
-							
+
 						</div>
 					</div>
 				</div>

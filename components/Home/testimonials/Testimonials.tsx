@@ -89,79 +89,76 @@ export const Testimonials = () => {
     };
 
     return (
-		<div className="container">
-			{/* Title */}
-			<h2 className="text-4xl md:text-[54px] font-semibold text-center mb-12 text-[#114D3A]">
-				Testimonials
-			</h2>
+        <div className="container">
+            {/* Title */}
+            <h2 className="text-4xl md:text-[54px] font-semibold text-center mb-12 text-[#114D3A]">
+                Testimonials
+            </h2>
 
-			{/* Testimonials Slider */}
-			<div className="mb-8">
-				<Slider {...settings}>
-					{testimonials.map((testimonial, index) => {
-						const isCenter = index === currentSlide;
-						return (
-							<div key={testimonial.id} className="px-4">
-								<div
-									className={`rounded-2xl p-8 transition-all duration-300 min-h-64 flex flex-col justify-between ${
-										isCenter
-											? "bg-secondary text-white shadow-lg"
-											: "bg-white text-gray-700 shadow-md"
-									}`}
-								>
-									{/* Quote Icon */}
-									<div className="mb-6">
-										<Image
-											src="/Images/tumb.png"
-											alt="Quote Icon"
-											width={60}
-											height={47}
-											className={`transition-all duration-300 ${
-												isCenter
-													? "opacity-40"
-													: "brightness-0 opacity-20"
-											}`}
-										/>
-									</div>
+            {/* Testimonials Slider */}
+            <div className="mb-8">
+                <Slider {...settings}>
+                    {testimonials.map((testimonial, index) => {
+                        const isCenter = index === currentSlide;
+                        return (
+                            <div key={testimonial.id} className="px-4">
+                                <div
+                                    className={`rounded-2xl p-8 transition-all duration-300 min-h-64 flex flex-col justify-between ${isCenter
+                                        ? "bg-secondary text-white shadow-lg"
+                                        : "bg-white text-gray-700 shadow-md"
+                                        }`}
+                                >
+                                    {/* Quote Icon */}
+                                    <div className="mb-6">
+                                        <Image
+                                            src="/Images/tumb.png"
+                                            alt="Quote Icon"
+                                            width={60}
+                                            height={47}
+                                            className={`transition-all duration-300 ${isCenter
+                                                ? "opacity-40"
+                                                : "brightness-0 opacity-20"
+                                                }`}
+                                        />
+                                    </div>
 
-									{/* Testimonial Text */}
-									<p className={`text-base md:text-lg mb-12 ${isCenter ? 'text-white' : 'text-text-dark'}`}>
-										{testimonial.text}
-									</p>
+                                    {/* Testimonial Text */}
+                                    <p className={`text-base md:text-lg mb-12 md:min-h-28 ${isCenter ? 'text-white' : 'text-text-dark'}`}>
+                                        {testimonial.text}
+                                    </p>
 
-									{/* Author Info */}
-									<div className="flex items-center gap-3">
-										<div className="relative w-10 h-10">
-											<Image
-												src={testimonial.avatar}
-												alt={testimonial.author}
-												fill
-												className="rounded-full object-cover"
-											/>
-										</div>
-										<div>
-											<p className={`font-semibold text-sm md:text-base ${isCenter ? 'text-white' : 'text-black'}`}>
-												{testimonial.author}
-											</p>
-											<p
-												className={`text-xs md:text-sm ${
-													isCenter
-														? "text-white"
-														: "text-[#A7A7A7]"
-												}`}
-											>
-												{testimonial.title}
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						);
-					})}
-				</Slider>
-			</div>
+                                    {/* Author Info */}
+                                    <div className="flex items-center gap-3">
+                                        <div className="relative w-10 h-10">
+                                            <Image
+                                                src={testimonial.avatar}
+                                                alt={testimonial.author}
+                                                fill
+                                                className="rounded-full object-cover"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className={`font-semibold text-sm md:text-base ${isCenter ? 'text-white' : 'text-black'}`}>
+                                                {testimonial.author}
+                                            </p>
+                                            <p
+                                                className={`text-xs md:text-sm ${isCenter
+                                                    ? "text-white"
+                                                    : "text-[#A7A7A7]"
+                                                    }`}
+                                            >
+                                                {testimonial.title}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </Slider>
+            </div>
 
-			<style jsx>{`
+            <style jsx>{`
 				:global(.custom-dots) {
 					text-align: center;
 					padding-top: 20px;
@@ -195,6 +192,6 @@ export const Testimonials = () => {
 					transform: scale(1.3);
 				}
 			`}</style>
-		</div>
-	);
+        </div>
+    );
 };
