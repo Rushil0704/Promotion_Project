@@ -30,19 +30,19 @@ export const KeyFeatures = () => {
 
 	return (
 		// સેક્શનમાં overflow-hidden રાખવું જેથી Glow બહાર ન નીકળે
-		<section className="relative overflow-hidden py-16 md:py-24">
+		<section className="relative overflow-hidden ">
 			{/* --- RIGHT SIDE GLOW (Tailwind Classes) --- */}
 			<div className="absolute pointer-events-none rounded-full bg-primary/15 blur-[150px] w-149 h-164.75 top-[12%] -right-25 -z-10" />
 
 			{/* --- LEFT SIDE GLOW (Tailwind Classes) --- */}
 			<div className="absolute pointer-events-none rounded-full bg-primary/15 blur-[150px] w-150 h-162.5 bottom-[10%] -left-12.5 -z-10" />
 
-			<div className="container relative z-10 flex flex-col gap-8 md:gap-12 mx-auto px-4">
+			<div className="container relative z-10 flex flex-col gap-8 md:gap-15 mx-auto">
 				<div className="text-center max-w-2xl mx-auto">
 					<h2 className="text-3xl md:text-5xl font-bold text-[#114D3A]">
 						Key Features
 					</h2>
-					<p className="text-base text-gray-500 mt-4">
+					<p className="text-[20px]  mt-4">
 						Powerful Features Designed for Everyday Health
 					</p>
 				</div>
@@ -52,7 +52,7 @@ export const KeyFeatures = () => {
 						{features.map((f, idx) => (
 							<li
 								key={idx}
-								className="flex md:flex-row flex-col justify-between items-center md:gap-10 gap-4 border-b border-[#bbb] py-10 md:py-14 last:border-0"
+								className="flex md:flex-row flex-col justify-between items-center md:gap-10 gap-4 border-b border-[#bbb] py-10 md:py-12 last:border-0"
 							>
 								{/* Badge Section */}
 								<div className="flex items-start md:items-center">
@@ -74,7 +74,7 @@ export const KeyFeatures = () => {
 
 								{/* Description Section */}
 								<div className="md:text-start text-center flex-[1.5] w-full">
-									<p className="text-base md:text-[18px] text-gray-500 leading-relaxed">
+									<p className="text-base md:text-[18px] text-text-dark leading-relaxed">
 										{f.desc}
 									</p>
 								</div>

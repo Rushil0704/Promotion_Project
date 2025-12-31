@@ -89,18 +89,18 @@ export const Testimonials = () => {
     };
 
     return (
-        <div className="container">
-            {/* Title */}
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-teal-700">
-                Testimonials
-            </h2>
+		<div className="container">
+			{/* Title */}
+			<h2 className="text-4xl md:text-[54px] font-semibold text-center mb-12 text-[#114D3A]">
+				Testimonials
+			</h2>
 
-            {/* Testimonials Slider */}
-            <div className="mb-8">
-                <Slider {...settings}>
-                    {testimonials.map((testimonial, index) => {
-                        const isCenter = index === currentSlide;
-                        return (
+			{/* Testimonials Slider */}
+			<div className="mb-8">
+				<Slider {...settings}>
+					{testimonials.map((testimonial, index) => {
+						const isCenter = index === currentSlide;
+						return (
 							<div key={testimonial.id} className="px-4">
 								<div
 									className={`rounded-2xl p-8 transition-all duration-300 min-h-64 flex flex-col justify-between ${
@@ -110,13 +110,12 @@ export const Testimonials = () => {
 									}`}
 								>
 									{/* Quote Icon */}
-									<div className="mb-4">
+									<div className="mb-6">
 										<Image
 											src="/Images/tumb.png"
 											alt="Quote Icon"
 											width={60}
 											height={47}
-											
 											className={`transition-all duration-300 ${
 												isCenter
 													? "opacity-40"
@@ -126,7 +125,7 @@ export const Testimonials = () => {
 									</div>
 
 									{/* Testimonial Text */}
-									<p className="text-base md:text-lg mb-6 leading-relaxed">
+									<p className={`text-base md:text-lg mb-12 ${isCenter ? 'text-white' : 'text-text-dark'}`}>
 										{testimonial.text}
 									</p>
 
@@ -141,14 +140,14 @@ export const Testimonials = () => {
 											/>
 										</div>
 										<div>
-											<p className="font-semibold text-sm md:text-base">
+											<p className={`font-semibold text-sm md:text-base ${isCenter ? 'text-white' : 'text-black'}`}>
 												{testimonial.author}
 											</p>
 											<p
 												className={`text-xs md:text-sm ${
 													isCenter
-														? "text-teal-100"
-														: "text-gray-500"
+														? "text-white"
+														: "text-[#A7A7A7]"
 												}`}
 											>
 												{testimonial.title}
@@ -158,44 +157,44 @@ export const Testimonials = () => {
 								</div>
 							</div>
 						);
-                    })}
-                </Slider>
-            </div>
+					})}
+				</Slider>
+			</div>
 
-            <style jsx>{`
-                :global(.custom-dots) {
-                    text-align: center;
-                    padding-top: 20px;
-                }
+			<style jsx>{`
+				:global(.custom-dots) {
+					text-align: center;
+					padding-top: 20px;
+				}
 
-                :global(.custom-dots li) {
-                    display: inline-block;
-                    width: 12px;
-                    height: 12px;
-                    margin: 0 6px;
-                }
+				:global(.custom-dots li) {
+					display: inline-block;
+					width: 12px;
+					height: 12px;
+					margin: 0 6px;
+				}
 
-                :global(.custom-dots li button) {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 50%;
-                    background-color: #FFCA00;
-                    border: none;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    padding: 0;
-                }
+				:global(.custom-dots li button) {
+					display: block;
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+					background-color: #ffca00;
+					border: none;
+					cursor: pointer;
+					transition: all 0.3s ease;
+					padding: 0;
+				}
 
-                :global(.custom-dots li button:hover) {
-                    background-color: #FFCA00;
-                }
+				:global(.custom-dots li button:hover) {
+					background-color: #ffca00;
+				}
 
-                :global(.custom-dots li.slick-active button) {
-                    background-color: #08523B;
-                    transform: scale(1.3);
-                }
-            `}</style>
-        </div>
-    );
+				:global(.custom-dots li.slick-active button) {
+					background-color: #08523b;
+					transform: scale(1.3);
+				}
+			`}</style>
+		</div>
+	);
 };

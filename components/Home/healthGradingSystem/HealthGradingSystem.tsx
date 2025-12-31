@@ -13,11 +13,11 @@ export const HealthGradingSystem = () => {
 		<section className=" bg-[#F5F3E8]">
 			<div className="container mx-auto ">
 				{/* Header Section */}
-				<div className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+				<div className="text-center sm:mb-25 mb-16">
+					<h2 className="text-3xl md:text-5xl font-bold text-secondary mb-4">
 						Health Grading System
 					</h2>
-					<p className="text-gray-600 text-lg max-w-2xl mx-auto">
+					<p className=" text-lg sm:max-w-4xl  max-w-2xl mx-auto">
 						Each product is graded using a simple health score based
 						on nutrition quality, ingredient safety, and overall
 						impact on your health, making it easy to understand at a
@@ -42,26 +42,25 @@ export const HealthGradingSystem = () => {
 					<div className="relative z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-8 px-10 py-12 lg:px-20 lg:py-0">
 						{/* Left Section: Grades List */}
 						<div className="flex-1 w-full lg:w-auto">
-							<h3 className="text-2xl lg:text-[32px] font-bold text-black mb-6 leading-tight">
-								Simple Health Grades{" "}
-								<br className="hidden lg:block" /> You Can Trust
+							<h3 className="text-2xl lg:text-2xl font-bold text-black mb-4  leading-tight">
+								Simple Health Grades You Can Trust
 							</h3>
 
 							{/* Grades Explained Button */}
-							<button className="border-2 border-black text-black font-semibold rounded-full px-6 py-2 text-sm mb-8 hover:bg-black hover:text-white transition-colors">
+							<button className="border border-[#156445] text-[#156445] font-medium rounded-full px-5 py-1.5 text-sm mb-6.25 ">
 								Grades Explained
 							</button>
 
 							{/* Grade Items */}
-							<ul className="space-y-4">
+							<ul className="flex flex-col gap-3.5">
 								{grades.map((grade, index) => (
 									<li
 										key={index}
 										className="flex items-center gap-3"
 									>
 										<span className="w-2 h-2 bg-black rounded-full shrink-0"></span>
-										<span className="text-black text-lg lg:text-xl">
-											<span className="font-bold">
+										<span className="text-black text-lg lg:text-[28px]">
+											<span className="font-medium">
 												Grade {grade.letter}
 											</span>{" "}
 											– {grade.description}

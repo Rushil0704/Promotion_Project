@@ -29,7 +29,7 @@ export const Hero = () => {
 						{/* ----------------------------------------- */}
 
 						{/* Top "Loved by..." Pill */}
-						<div className="inline-flex items-center bg-white/60 border border-[#E5E3D8] rounded-full shadow-sm backdrop-blur-sm pr-6 py-2 pl-2">
+						<div className="inline-flex items-center  border border-[#E5E3D8] rounded-full shadow-sm backdrop-blur-sm pr-6 py-2 pl-2">
 							<div className="flex items-center">
 								<div className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden z-30">
 									<Image
@@ -84,7 +84,7 @@ export const Hero = () => {
 						</p>
 
 						{/* App Store Buttons */}
-						<div className="flex flex-wrap justify-center items-center gap-5 mt-4">
+						<div className="flex flex-wrap justify-center items-center gap-5">
 							{/* Google Play Button */}
 							<a
 								href="#"
@@ -160,14 +160,7 @@ export const Hero = () => {
 								className="relative z-10 w-full h-auto drop-shadow-2xl"
 							/>
 
-							{/* Floating Product Card - Commented out as per your previous code, uncomment if needed */}
-							{/* <Image
-                src="/Images/floating-card.png"
-                alt="Product Scan Result"
-                width={240}
-                height={300}
-                className="absolute -bottom-10 -right-4 lg:-right-10 z-20 w-50 md:w-60 h-auto shadow-[0_20px_40px_-15px_rgba(0,0,0,0.2)] rounded-2xl"
-              /> */}
+							
 						</div>
 					</div>
 				</div>

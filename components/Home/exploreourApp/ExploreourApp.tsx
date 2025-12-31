@@ -86,7 +86,7 @@ export const ExploreourApp = () => {
     };
 
     return (
-        <div className="w-full py-16 px-4 bg-[#F5F3E8] overflow-hidden">
+        <div className="w-full  bg-[#F5F3E8] overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#114D3A]">
                     Explore our App
@@ -139,10 +139,10 @@ export const ExploreourApp = () => {
                             className="object-contain"
                         />
                         <div className="flex flex-col items-start leading-tight text-left">
-                            <span className="text-[12px] tracking-wider opacity-80 uppercase">
+                            <span className="text-[15px] text-white   uppercase">
                                 GET IT ON
                             </span>
-                            <span className="text-xl font-bold text-[#FFD700]">
+                            <span className="text-[22px] font-medium text-[#FFD700]">
                                 Google Play
                             </span>
                         </div>
@@ -157,10 +157,10 @@ export const ExploreourApp = () => {
                             className="object-contain brightness-0 invert"
                         />
                         <div className="flex flex-col items-start leading-tight text-left">
-                            <span className="text-[12px] tracking-wider opacity-80 uppercase">
+                            <span className="text-[15px] text-white  uppercase">
                                 GET IT ON
                             </span>
-                            <span className="text-xl font-bold text-[#FFD700]">
+                            <span className="text-[22px] font-medium text-[#FFD700]">
                                 App Store
                             </span>
                         </div>
